@@ -26,6 +26,8 @@
                 <a href="#home">Home</a>
                 <a href="#tentang">Tentang</a>
                 <a href="#kompetensi">Kompetensi</a>
+                <a href="#kurikulum">Kurikulum</a>
+                <a href="#karir">Karir</a>
                 <a href="#beasiswa">Beasiswa</a>
             </nav>
             <div class="nav-actions">
@@ -45,7 +47,7 @@
                 <div class="hero-overlay"></div>
             </div>
             <div class="container hero-content">
-                <div class="hero-text">
+                <div class="hero-text reveal">
                     <span class="badge">Sarjana Terapan (D4)</span>
                     <h1>Melangkah Maju dengan <br><span class="highlight">Teknologi Rekayasa Logistik</span></h1>
                     <p>Menjadi Program Studi unggul dalam bidang pendidikan vokasi teknologi rekayasa logistik yang bersinergi dengan industri di Jawa Barat.</p>
@@ -61,14 +63,10 @@
         <section id="tentang" class="about-section pt-100 pb-100">
             <div class="container">
                 <div class="about-grid">
-                    <div class="about-image">
+                    <div class="about-image reveal-left">
                         <img src="assets/images/trl-poltek.png" alt="Mahasiswa Politeknik META belajar">
-                        <div class="experience-badge">
-                            <span class="number">Terbaik</span>
-                            <span class="text">di Cikarang</span>
-                        </div>
                     </div>
-                    <div class="about-content">
+                    <div class="about-content reveal-right">
                         <span class="section-subtitle">Tentang Program Studi</span>
                         <h2 class="section-title">Inovasi Berbasis Penelitian Terapan</h2>
                         <p class="text-muted">Program Studi D4 Teknologi Rekayasa Logistik hadir untuk mempersiapkan sumber daya teknologi rekayasa logistik dan infrastruktur untuk penyelenggaraan inovasi berbasis penelitian yang terserap di industri kawasan Jawa Barat.</p>
@@ -108,32 +106,58 @@
             </div>
         </section>
 
+        <!-- Partners Section (Infinite Slider) -->
+        <section class="partners-section pt-100 pb-100 reveal">
+            <div class="container text-center mb-4">
+                <span class="section-subtitle">Mitra Industri Terkemuka</span>
+                <h2 class="section-title" style="font-size: 1.5rem;">Bekerjasama dengan Perusahaan Global</h2>
+            </div>
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Set 1 -->
+                    <div class="logo-item"><img src="assets/logo%20pt/toyota.png" alt="Toyota"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/honda-logo-png-44825.png" alt="Honda"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/DHL.png" alt="DHL"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/Unilever.png" alt="Unilever"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/Amazon_logo.svg.png" alt="Amazon"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/FedEx_Corporation_-_2016_Logo.svg.png" alt="FedEx"></div>
+                    <!-- Set 2 (Duplicated for seamless loop) -->
+                    <div class="logo-item"><img src="assets/logo%20pt/toyota.png" alt="Toyota"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/honda-logo-png-44825.png" alt="Honda"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/DHL.png" alt="DHL"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/Unilever.png" alt="Unilever"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/Amazon_logo.svg.png" alt="Amazon"></div>
+                    <div class="logo-item"><img src="assets/logo%20pt/FedEx_Corporation_-_2016_Logo.svg.png" alt="FedEx"></div>
+                </div>
+            </div>
+        </section>
+
         <!-- Keunggulan / Kompetensi Section -->
         <section id="kompetensi" class="competencies-section light-bg pt-100 pb-100">
             <div class="container">
-                <div class="section-header text-center">
+                <div class="section-header text-center reveal">
                     <span class="section-subtitle">Kompetensi Lulusan</span>
                     <h2 class="section-title">Keunggulan Lulusan TRL</h2>
                     <p class="section-desc">Lulusan kami dibekali dengan keterampilan teknis dan manajerial yang sesuai dengan kebutuhan industri 4.0.</p>
                 </div>
 
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card reveal" style="transition-delay: 0.1s;">
                         <div class="feature-icon"><i class="fa-solid fa-network-wired"></i></div>
                         <h3>Manajemen Rantai Pasok Terpadu</h3>
                         <p>Mampu merancang dan mengelola <em>Supply Chain Management</em> menggunakan teknologi informasi mutakhir.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal" style="transition-delay: 0.2s;">
                         <div class="feature-icon"><i class="fa-solid fa-microchip"></i></div>
                         <h3>Teknologi Otomasi Gudang</h3>
                         <p>Pengoperasian dan perancangan sistem gudang pintar yang mengintegrasikan perangkat lunak dan keras.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal" style="transition-delay: 0.3s;">
                         <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
                         <h3>Optimasi Transportasi & Distribusi</h3>
                         <p>Kompetensi dalam analisis rute, efisiensi waktu, dan pengurangan biaya pengiriman.</p>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal" style="transition-delay: 0.4s;">
                         <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
                         <h3>Data Analytics in Logistics</h3>
                         <p>Memanfaatkan data untuk memprediksi permintaan, mengelola inventaris, dan pengambilan keputusan.</p>
@@ -142,10 +166,44 @@
             </div>
         </section>
 
+        <!-- Prospek Karir Section -->
+        <section id="karir" class="career-section pt-100 pb-100">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-subtitle">Peluang Masa Depan</span>
+                    <h2 class="section-title">Prospek Karir Lulusan</h2>
+                    <p class="section-desc">Lulusan TRL memiliki jangkauan karir yang sangat luas di berbagai sektor industri manufaktur dan jasa.</p>
+                </div>
+
+                <div class="career-grid">
+                    <div class="career-card reveal" style="transition-delay: 0.1s;">
+                        <div class="career-icon"><i class="fa-solid fa-warehouse"></i></div>
+                        <h3>Warehouse Manager</h3>
+                        <p>Mengelola operasi gudang modern dengan sistem otomatisasi dan efisiensi tinggi.</p>
+                    </div>
+                    <div class="career-card reveal" style="transition-delay: 0.2s;">
+                        <div class="career-icon"><i class="fa-solid fa-route"></i></div>
+                        <h3>Supply Chain Analyst</h3>
+                        <p>Menganalisis dan mengoptimalkan rantai pasok perusahaan untuk mengurangi biaya.</p>
+                    </div>
+                    <div class="career-card reveal" style="transition-delay: 0.3s;">
+                        <div class="career-icon"><i class="fa-solid fa-ship"></i></div>
+                        <h3>Export Import Specialist</h3>
+                        <p>Menangani prosedur pengiriman internasional dan logistik lintas batas negara.</p>
+                    </div>
+                    <div class="career-card reveal" style="transition-delay: 0.4s;">
+                        <div class="career-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+                        <h3>Logistics Consultant</h3>
+                        <p>Memberikan solusi teknologi untuk permasalahan logistik kompleks di industri.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Kurikulum Section -->
         <section id="kurikulum" class="curriculum-section pt-100 pb-100">
             <div class="container">
-                <div class="section-header text-center">
+                <div class="section-header text-center reveal">
                     <span class="section-subtitle">Kurikulum Akademik</span>
                     <h2 class="section-title">Mata Kuliah Inti Program Studi</h2>
                     <p class="section-desc">Kurikulum dirancang khusus agar mahasiswa siap menghadapi tantangan logistik modern dengan komposisi teori dan praktik yang seimbang.</p>
@@ -153,7 +211,7 @@
 
                 <div class="curriculum-grid">
                     <!-- Semester 1 -->
-                    <div class="semester-card">
+                    <div class="semester-card reveal-left">
                         <div class="semester-header">
                             <h3>Semester 1</h3>
                         </div>
@@ -210,72 +268,68 @@
                                     <span class="sks-badge praktek empty" title="0 SKS Praktek">0P</span>
                                 </div>
                             </li>
+                        </ul>
+                    </div>
+
+                    <!-- Semester 2 -->
+                    <div class="semester-card reveal-right">
+                        <div class="semester-header">
+                            <h3>Semester 2</h3>
+                        </div>
+                        <ul class="subject-list">
                             <li>
                                 <div class="subject-main">
-                                    <i class="fa-solid fa-flask"></i>
+                                    <i class="fa-solid fa-calculator"></i>
                                     <div class="subject-details">
-                                        <span class="subject-code">RL/1002</span>
-                                        <span class="subject-name">Kimia</span>
-                                    </div>
-                                </div>
-                                <div class="sks-details">
-                                    <span class="sks-badge teori" title="1 SKS Teori">1T</span>
-                                    <span class="sks-badge praktek" title="1 SKS Praktek">1P</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="subject-main">
-                                    <i class="fa-solid fa-atom"></i>
-                                    <div class="subject-details">
-                                        <span class="subject-code">RL/1003</span>
-                                        <span class="subject-name">Fisika</span>
-                                    </div>
-                                </div>
-                                <div class="sks-details">
-                                    <span class="sks-badge teori" title="1 SKS Teori">1T</span>
-                                    <span class="sks-badge praktek" title="1 SKS Praktek">1P</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="subject-main">
-                                    <i class="fa-solid fa-compass-drafting"></i>
-                                    <div class="subject-details">
-                                        <span class="subject-code">RL/1004</span>
-                                        <span class="subject-name">Menggambar Teknik</span>
+                                        <span class="subject-code">RL/1006</span>
+                                        <span class="subject-name">Kalkulus I</span>
                                     </div>
                                 </div>
                                 <div class="sks-details">
                                     <span class="sks-badge teori" title="2 SKS Teori">2T</span>
-                                    <span class="sks-badge praktek" title="1 SKS Praktek">1P</span>
+                                    <span class="sks-badge praktek" title="1 SKS Praktek">?</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="subject-main">
-                                    <i class="fa-solid fa-helmet-safety"></i>
+                                    <i class="fa-solid fa-boxes-packing"></i>
                                     <div class="subject-details">
-                                        <span class="subject-code">RL/1005</span>
-                                        <span class="subject-name">Keselamatan dan Lingkungan Kerja</span>
+                                        <span class="subject-code">RL/1007</span>
+                                        <span class="subject-name">Dasar-Dasar Logistik</span>
+                                    </div>
+                                </div>
+                                <div class="sks-details">
+                                    <span class="sks-badge teori" title="2 SKS Teori">2T</span>
+                                    <span class="sks-badge praktek empty" title="0 SKS Praktek">0P</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="subject-main">
+                                    <i class="fa-solid fa-laptop-code"></i>
+                                    <div class="subject-details">
+                                        <span class="subject-code">RL/1008</span>
+                                        <span class="subject-name">Algoritma & Pemrograman</span>
                                     </div>
                                 </div>
                                 <div class="sks-details">
                                     <span class="sks-badge teori" title="1 SKS Teori">1T</span>
+                                    <span class="sks-badge praktek" title="2 SKS Praktek">2P</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="subject-main">
+                                    <i class="fa-solid fa-users-gear"></i>
+                                    <div class="subject-details">
+                                        <span class="subject-code">RL/1009</span>
+                                        <span class="subject-name">Manajemen Industri</span>
+                                    </div>
+                                </div>
+                                <div class="sks-details">
+                                    <span class="sks-badge teori" title="2 SKS Teori">2T</span>
                                     <span class="sks-badge praktek empty" title="0 SKS Praktek">0P</span>
                                 </div>
                             </li>
                         </ul>
-                    </div>
-
-                    <!-- Semester Placeholder -->
-                    <div class="semester-card placeholder-card">
-                        <div class="semester-header" style="background-color: var(--bg-gray); opacity: 0.6;">
-                            <h3>Semester 2</h3>
-                        </div>
-                        <div class="placeholder-body d-flex align-items-center justify-content-center" style="height: 100%; min-height: 300px; opacity: 0.5;">
-                            <div class="text-center">
-                                <i class="fa-solid fa-clock-rotate-left fa-3x mb-3 text-muted"></i>
-                                <p class="text-muted">Data Mata Kuliah Semester 2<br>Akan segera diperbarui</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -328,6 +382,43 @@
             </div>
         </section>
 
+        <!-- Testimonial Section -->
+        <section id="testimoni" class="testimonial-section pt-100 pb-100 light-bg">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-subtitle">Testimoni</span>
+                    <h2 class="section-title">Suara Mahasiswa Kami</h2>
+                    <p class="section-desc">Apa kata mereka yang sudah merasakan pengalaman belajar di Teknologi Rekayasa Logistik.</p>
+                </div>
+
+                <div class="testimonial-grid">
+                    <div class="testimonial-card reveal-left">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <p class="testimonial-text">"Kurikulum yang sangat relevan dengan industri di Cikarang. Saya merasa sangat terbantu dengan praktek langsung yang diberikan para dosen profesional."</p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/student-1.png" alt="Student 1" class="author-img">
+                            <div class="author-info">
+                                <h4>Budi Santoso</h4>
+                                <span>Mahasiswa Semester 6</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card reveal-right">
+                        <i class="fa-solid fa-quote-right quote-icon"></i>
+                        <p class="testimonial-text">"Dukungan beasiswa dari mitra industri sangat memotivasi saya. Fasilitas laboratorium logistiknya juga sangat canggih dan mengikuti standar industri 4.0."</p>
+                        <div class="testimonial-author">
+                            <img src="assets/images/student-2.png" alt="Student 2" class="author-img">
+                            <div class="author-info">
+                                <h4>Siti Aminah</h4>
+                                <span>Mahasiswa Semester 4</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Call To Action -->
         <section class="cta-section pt-100 pb-100">
             <div class="container text-center">
@@ -359,9 +450,9 @@
                 <ul>
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#tentang">Tentang Program Studi</a></li>
-                    <li><a href="#kompetensi">Kompetensi Lulusan</a></li>
-                    <li><a href="https://lppm.politeknikmeta.ac.id">Penelitian & Pengabdian</a></li>
-                    <li><a href="https://politeknikmeta.ac.id/kontak/">Hubungi Kami</a></li>
+                    <li><a href="#kurikulum">Kurikulum</a></li>
+                    <li><a href="#karir">Prospek Karir</a></li>
+                    <li><a href="#testimoni">Testimoni</a></li>
                 </ul>
             </div>
 

@@ -2,63 +2,61 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     
-    // --- Sticky Navbar ---
+    // --- Sticky Navbar & Glassmorphism ---
     const navbar = document.querySelector('.navbar');
     
-    window.addEventListener('scroll', () => {
+    const handleScroll = () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
+            navbar.classList.add('glass');
         } else {
             navbar.classList.remove('scrolled');
+            navbar.classList.remove('glass');
         }
-    });
+    };
 
-    // Initial check in case user loaded page halfway down
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    }
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
 
-    // --- Mobile Menu Toggle (Basic functionality) ---
-    // Note: Since this is a simple landing page, the mobile menu logic could involve showing a dropdown.
-    // For now, we will just add a click listener.
+    // --- Mobile Menu Toggle (Refactored) ---
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navLinksContainer = document.querySelector('.nav-links');
-    
-    // We can add simple inline style toggling for demonstration
-    let isMenuOpen = false;
+    const menuIcon = mobileMenuBtn.querySelector('i');
     
     mobileMenuBtn.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
+        navLinksContainer.classList.toggle('active');
         
-        if (isMenuOpen) {
-            navLinksContainer.style.display = 'flex';
-            navLinksContainer.style.flexDirection = 'column';
-            navLinksContainer.style.position = 'absolute';
-            navLinksContainer.style.top = '100%';
-            navLinksContainer.style.left = '0';
-            navLinksContainer.style.width = '100%';
-            navLinksContainer.style.backgroundColor = 'var(--white)';
-            navLinksContainer.style.padding = '20px';
-            navLinksContainer.style.boxShadow = 'var(--shadow-md)';
-            
-            // Set text color for links
-            const links = navLinksContainer.querySelectorAll('a');
-            links.forEach(link => {
-                link.style.color = 'var(--text-dark)';
-                link.style.marginBottom = '15px';
-            });
-            
+        // Toggle icon between bars and xmark
+        if (navLinksContainer.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
         } else {
-            // Reset to default css styles
-            navLinksContainer.style = '';
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
         }
     });
+
+    // --- Scroll Reveal Animation (Intersection Observer) ---
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                // Optional: stop observing once revealed
+                // revealObserver.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
 
     // --- Smooth Scrolling for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
-            
-            // If the href is strictly "#", ignore it
             if (this.getAttribute('href') === '#') return;
 
             e.preventDefault();
@@ -68,11 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (targetElement) {
                 // If mobile menu is open, close it
-                if (isMenuOpen && window.innerWidth <= 768) {
+                if (navLinksContainer.classList.contains('active')) {
                     mobileMenuBtn.click();
                 }
 
-                // Scroll to target with offset for navbar
                 const navbarHeight = navbar.offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
                 
@@ -82,6 +79,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+
+    // --- Back to Top Button ---
+    const backToTop = document.createElement('button');
+    backToTop.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    backToTop.className = 'back-to-top';
+    document.body.appendChild(backToTop);
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 500) {
+            backToTop.classList.add('show');
+        } else {
+            backToTop.classList.remove('show');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
 });
