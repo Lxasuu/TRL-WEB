@@ -99,4 +99,59 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // --- Statistics Counter Animation ---
+    const statsSection = document.querySelector('.stats-section');
+    const counters = document.querySelectorAll('.stat-number');
+    let started = false;
+
+    const startCounters = () => {
+        if (started) return;
+        started = true;
+        
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute('data-target'));
+            const duration = 2000; // 2 seconds
+            const increment = target / (duration / 16); // 60fps
+            
+            let current = 0;
+            const updateCount = () => {
+                current += increment;
+                if (current < target) {
+                    counter.innerText = Math.ceil(current);
+                    requestAnimationFrame(updateCount);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    };
+
+    const statsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            startCounters();
+        }
+    }, { threshold: 0.5 });
+
+    if (statsSection) statsObserver.observe(statsSection);
+
+    // --- FAQ Accordion Toggle ---
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            faqItems.forEach(otherItem => otherItem.classList.remove('active'));
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+
 });
+
